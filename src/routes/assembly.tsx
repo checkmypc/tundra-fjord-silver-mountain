@@ -3,7 +3,8 @@ import { BookingForm } from "@/components/booking-form";
 import { PageHero } from "@/components/page-hero";
 import { Card } from "@/components/ui/card";
 import { useI18n } from "@/lib/i18n";
-import { ASSEMBLY } from "@/lib/services";
+import { ASSEMBLY, livePackages } from "@/lib/services";
+import { useOps } from "@/lib/ops";
 import { dh } from "@/lib/utils";
 
 export const Route = createFileRoute("/assembly")({
@@ -19,6 +20,8 @@ export const Route = createFileRoute("/assembly")({
 function AssemblyPage() {
   const { t } = useI18n();
   const { total } = Route.useSearch();
+  useOps((s) => s.packagePrices);
+  const packages = livePackages(ASSEMBLY.packages);
   return (
     <main>
       <PageHero eyebrow={t("nav.assembly")} title={t("svc.assemble")} description={t("svc.assembleDesc")}>
@@ -30,7 +33,7 @@ function AssemblyPage() {
       </PageHero>
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-2">
         <div className="space-y-3">
-          {ASSEMBLY.packages.map((p) => (
+          {packages.map((p) => (
             <Card key={p.id} className="rounded-2xl p-5">
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="font-display text-lg font-semibold">{p.name}</h3>
@@ -49,7 +52,7 @@ function AssemblyPage() {
         </div>
         <div>
           <h2 className="mb-3 font-display text-lg font-semibold">{t("ui.requestAssembly")}</h2>
-          <BookingForm kind="assembly" packages={ASSEMBLY.packages} extra="machine" />
+          <BookingForm kind="assembly" packages={packages} extra="machine" />
         </div>
       </div>
     </main>

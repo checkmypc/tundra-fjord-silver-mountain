@@ -4,8 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { saveBooking, whatsappHref } from "@/lib/bookings";
+import { ingestPublicBooking } from "@/lib/ops";
 import { useI18n } from "@/lib/i18n";
-import { CITIES, type Package } from "@/lib/services";
+import { CITIES, livePackagePrice, type Package } from "@/lib/services";
 import type { ServiceKind } from "@/lib/types";
 
 export function BookingForm({
@@ -24,16 +25,20 @@ export function BookingForm({
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
+    const packageId = String(fd.get("package") || packages?.[0]?.id || "");
     const booking = saveBooking({
       kind,
       name: String(fd.get("name") || ""),
       phone: String(fd.get("phone") || ""),
       city: String(fd.get("city") || ""),
-      packageId: String(fd.get("package") || packages?.[0]?.id || ""),
+      packageId,
       notes: String(fd.get("notes") || ""),
       listingUrl: String(fd.get("listing") || ""),
       machineType: String(fd.get("machine") || ""),
+      status: "new",
+      quotedPrice: livePackagePrice(packageId, packages?.[0]?.price ?? 0),
     });
+    ingestPublicBooking(booking);
     const text = [
       `CHECKMYPC — ${kind}`,
       `${booking.name} · ${booking.city}`,

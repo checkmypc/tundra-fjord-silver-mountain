@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { Badge } from "@/components/ui/badge";
 import { catalog, CATEGORY_ORDER, categoryLabel, lowestOffer, productsByCategory } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import type { CategorySlug } from "@/lib/types";
 import { dh } from "@/lib/utils";
 
@@ -18,10 +19,11 @@ export const Route = createFileRoute("/compare")({
 function ComparePage() {
   const { t } = useI18n();
   const { category = "gpu" } = Route.useSearch();
+  const products = useOps((s) => s.products);
   const rows = useMemo(() => {
     const list = productsByCategory(category);
     return [...list].sort((a, b) => a.best_price - b.best_price);
-  }, [category]);
+  }, [category, products]);
 
   return (
     <main>

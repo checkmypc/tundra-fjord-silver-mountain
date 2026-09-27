@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { lowestOffer, productById } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import { useBuild } from "@/lib/store";
 import { ago, dh, freshness } from "@/lib/utils";
 
@@ -32,6 +33,7 @@ function sparkPath(history: { d: string; p: number }[]) {
 
 function ProductPage() {
   const { id } = Route.useParams();
+  useOps((s) => s.products);
   const p = productById(id);
   const { t } = useI18n();
   const add = useBuild((s) => s.add);

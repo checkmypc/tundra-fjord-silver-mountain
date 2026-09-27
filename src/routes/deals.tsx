@@ -2,15 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { catalog } from "@/lib/catalog";
+import { allProducts } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import { dh } from "@/lib/utils";
 
 export const Route = createFileRoute("/deals")({ component: DealsPage });
 
 function DealsPage() {
   const { t } = useI18n();
-  const deals = [...catalog.products]
+  const products = useOps((s) => (s.hydrated ? s.products : allProducts()));
+  const deals = [...products]
     .map((p) => ({ ...p, save: p.msrp - p.best_price }))
     .filter((p) => p.save > 0)
     .sort((a, b) => b.save - a.save);

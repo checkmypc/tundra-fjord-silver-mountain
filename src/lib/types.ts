@@ -70,6 +70,8 @@ export type CompatCheck = { level: CompatLevel; title: string; detail: string };
 
 export type ServiceKind = "inspection" | "assembly" | "cleaning";
 
+export type BookingStatus = "new" | "confirmed" | "scheduled" | "in_progress" | "done" | "cancelled";
+
 export type Booking = {
   id: string;
   kind: ServiceKind;
@@ -81,4 +83,33 @@ export type Booking = {
   notes: string;
   listingUrl?: string;
   machineType?: string;
+  status?: BookingStatus;
+  assignedTo?: string;
+  quotedPrice?: number;
+  paidAmount?: number;
+  scheduledAt?: string;
+  internalNotes?: string;
+};
+
+export type Technician = {
+  id: string;
+  name: string;
+  city: string;
+  phone: string;
+  skills: ServiceKind[];
+  active: boolean;
+};
+
+export type ActivityItem = {
+  id: string;
+  at: string;
+  text: string;
+};
+
+export type OpsSettings = {
+  pin: string;
+  email: string;
+  phone: string;
+  hours: string;
+  whatsapp: string;
 };

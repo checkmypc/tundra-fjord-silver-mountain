@@ -20,3 +20,6 @@ export function freshness(minutes: number): "live" | "recent" | "stale" {
   if (minutes <= 24 * 60) return "recent";
   return "stale";
 }
+
+export const fieldClass =
+  "flex h-11 w-full rounded-md bg-bg px-3 text-sm text-fg shadow-[var(--shadow-border)] outline-none focus-visible:shadow-[var(--shadow-border-hover)]";

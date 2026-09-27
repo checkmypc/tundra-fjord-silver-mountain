@@ -3,20 +3,27 @@ import { PageHero } from "@/components/page-hero";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { SAMPLE_REPORT } from "@/lib/used";
+import { useOps } from "@/lib/ops";
+import { reportById } from "@/lib/used";
 import { dh } from "@/lib/utils";
 
 export const Route = createFileRoute("/reports/$id")({ component: ReportPage });
 
 function ReportPage() {
   const { id } = Route.useParams();
-  if (id !== SAMPLE_REPORT.id) throw notFound();
-  const r = SAMPLE_REPORT;
+  useOps((s) => s.reports);
+  const r = reportById(id);
+  if (!r || r.published === false) throw notFound();
+  const tone = r.verdict === "BUY" ? "ok" : r.verdict === "DONT" ? "danger" : "warn";
   return (
     <main>
-      <PageHero eyebrow="Verified inspection" title="Sample report · RTX 4060 tower" description={`${r.city} · ${r.date} · Tech ${r.technician}`}>
+      <PageHero
+        eyebrow="Verified inspection"
+        title={r.title || "Inspection report"}
+        description={`${r.city} · ${r.date} · Tech ${r.technician}`}
+      >
         <div className="flex flex-wrap items-center gap-3">
-          <Badge tone="warn">{r.verdict}</Badge>
+          <Badge tone={tone}>{r.verdict}</Badge>
           <span className="text-sm text-muted">
             Asking {dh(r.asking)} · Fair {dh(r.fairValue)} · Offer {dh(r.suggestOffer)}
           </span>
@@ -50,7 +57,7 @@ function ReportPage() {
           <Card className="rounded-2xl p-5">
             <h2 className="mb-3 font-display font-semibold">Issues</h2>
             <ul className="list-disc ps-4 text-sm text-muted">
-              {r.issues.map((i) => (
+              {r.issues.filter(Boolean).map((i) => (
                 <li key={i}>{i}</li>
               ))}
             </ul>

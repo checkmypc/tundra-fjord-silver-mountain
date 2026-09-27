@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import { prebuiltById } from "@/lib/prebuilts";
 import { useBuild } from "@/lib/store";
 import { dh } from "@/lib/utils";
@@ -14,6 +15,8 @@ export const Route = createFileRoute("/prebuilts/$id")({
 
 function PrebuiltDetail() {
   const { id } = Route.useParams();
+  useOps((s) => s.recipes);
+  useOps((s) => s.products);
   const listing = prebuiltById(id);
   const { t } = useI18n();
   const add = useBuild((s) => s.add);

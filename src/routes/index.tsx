@@ -2,18 +2,22 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Search, Shield, Sparkles, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { catalog, categoryImage, CATEGORY_ORDER } from "@/lib/catalog";
+import { catalog, categoryImage, CATEGORY_ORDER, allProducts } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import { prebuilts } from "@/lib/prebuilts";
-import { ASSEMBLY, CLEANING, INSPECTION, STEPS } from "@/lib/services";
+import { ASSEMBLY, CLEANING, INSPECTION, STEPS, livePackages } from "@/lib/services";
 import { dh } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   const { t } = useI18n();
+  const products = useOps((s) => (s.hydrated ? s.products : allProducts()));
+  useOps((s) => s.recipes);
+  useOps((s) => s.packagePrices);
   const featured = prebuilts().filter((p) => p.condition === "new").slice(0, 3);
-  const hot = [...catalog.products].sort((a, b) => b.msrp - b.best_price - (a.msrp - a.best_price)).slice(0, 4);
+  const hot = [...products].sort((a, b) => b.msrp - b.best_price - (a.msrp - a.best_price)).slice(0, 4);
 
   return (
     <main>
@@ -71,7 +75,7 @@ function Home() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {CATEGORY_ORDER.map((slug) => {
             const c = catalog.categories.find((x) => x.slug === slug);
-            const n = catalog.products.filter((p) => p.category === slug).length;
+            const n = products.filter((p) => p.category === slug).length;
             return (
               <Link
                 key={slug}
@@ -103,21 +107,21 @@ function Home() {
                 icon: Shield,
                 title: t("svc.inspect"),
                 desc: t("svc.inspectDesc"),
-                price: INSPECTION.basePrice,
+                price: livePackages(INSPECTION.packages)[0]?.price ?? INSPECTION.basePrice,
               },
               {
                 to: "/assembly" as const,
                 icon: Wrench,
                 title: t("svc.assemble"),
                 desc: t("svc.assembleDesc"),
-                price: ASSEMBLY.packages[0].price,
+                price: livePackages(ASSEMBLY.packages)[0].price,
               },
               {
                 to: "/cleaning" as const,
                 icon: Sparkles,
                 title: t("svc.clean"),
                 desc: t("svc.cleanDesc"),
-                price: CLEANING.packages[0].price,
+                price: livePackages(CLEANING.packages)[0].price,
               },
             ].map((s) => (
               <Link key={s.to} to={s.to} className="group">

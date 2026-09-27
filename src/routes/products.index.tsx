@@ -3,8 +3,9 @@ import { useMemo, useState } from "react";
 import { PageHero } from "@/components/page-hero";
 import { ProductRow } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
-import { catalog, CATEGORY_ORDER, categoryLabel } from "@/lib/catalog";
+import { CATEGORY_ORDER, categoryLabel, allProducts } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 import type { CategorySlug } from "@/lib/types";
 
 type Search = { category?: CategorySlug; q?: string };
@@ -22,6 +23,7 @@ export const Route = createFileRoute("/products/")({
 export function ProductsPage() {
   const { t } = useI18n();
   const { category, q } = Route.useSearch();
+  const products = useOps((s) => (s.hydrated ? s.products : allProducts()));
   const [budget, setBudget] = useState(8000);
   const [brand, setBrand] = useState("");
   const [sort, setSort] = useState("price-asc");
@@ -29,15 +31,15 @@ export function ProductsPage() {
 
   const brands = useMemo(() => {
     const set = new Set(
-      catalog.products
+      products
         .filter((p) => !category || p.category === category)
         .map((p) => p.brand),
     );
     return [...set].sort();
-  }, [category]);
+  }, [category, products]);
 
   const rows = useMemo(() => {
-    let list = catalog.products.filter((p) => {
+    let list = products.filter((p) => {
       if (category && p.category !== category) return false;
       if (p.best_price > budget) return false;
       if (brand && p.brand !== brand) return false;
@@ -51,7 +53,7 @@ export function ProductsPage() {
       return a.best_price - b.best_price;
     });
     return list;
-  }, [category, budget, brand, sort, q]);
+  }, [category, budget, brand, sort, q, products]);
 
   const sidebar = (
     <aside className="rounded-xl bg-surface p-4 shadow-[var(--shadow-border)]">

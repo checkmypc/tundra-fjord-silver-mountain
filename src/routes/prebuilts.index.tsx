@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { useI18n } from "@/lib/i18n";
 import { BUDGET_BRACKETS, prebuilts } from "@/lib/prebuilts";
+import { useOps } from "@/lib/ops";
 import { dh } from "@/lib/utils";
 
 type Search = { budget?: string; city?: string };
@@ -22,6 +23,8 @@ export const Route = createFileRoute("/prebuilts/")({
 function PrebuiltsPage() {
   const { t } = useI18n();
   const search = Route.useSearch();
+  useOps((s) => s.recipes);
+  useOps((s) => s.products);
   const all = prebuilts();
   const [bracket, setBracket] = useState<string | null>(search.budget ?? null);
   const [store, setStore] = useState("");

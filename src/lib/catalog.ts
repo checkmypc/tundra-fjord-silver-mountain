@@ -27,14 +27,22 @@ export const BUILDER_SLOTS: CategorySlug[] = [
   "case",
 ];
 
-const byIdMap = new Map(catalog.products.map((p) => [p.id, p]));
+let liveProductsFn: (() => Product[] | undefined) | undefined;
+export function bindLiveProducts(fn: () => Product[] | undefined) {
+  liveProductsFn = fn;
+}
+
+export function allProducts(): Product[] {
+  const live = liveProductsFn?.();
+  return live && live.length ? live : catalog.products;
+}
 
 export function productById(id: string): Product | undefined {
-  return byIdMap.get(id);
+  return allProducts().find((p) => p.id === id);
 }
 
 export function productsByCategory(slug: CategorySlug): Product[] {
-  return catalog.products.filter((p) => p.category === slug);
+  return allProducts().filter((p) => p.category === slug);
 }
 
 export function categoryLabel(slug: string): string {
@@ -55,10 +63,22 @@ export function lowestOffer(p: Product) {
 export function searchProducts(q: string): Product[] {
   const s = q.trim().toLowerCase();
   if (!s) return [];
-  return catalog.products.filter((p) => {
+  return allProducts().filter((p) => {
     const blob = `${p.name} ${p.brand} ${p.category} ${Object.values(p.specs).join(" ")}`.toLowerCase();
     return blob.includes(s);
   });
+}
+
+export function recomputeProduct(p: Product): Product {
+  const inStock = p.offers.filter((o) => o.stock !== "out_of_stock");
+  const pool = inStock.length ? inStock : p.offers;
+  const best = pool.length ? Math.min(...pool.map((o) => o.price)) : p.best_price;
+  return {
+    ...p,
+    best_price: best,
+    store_count: p.offers.length,
+    in_stock: inStock.length > 0,
+  };
 }
 
 export const DATA_GENERATED = catalog.generated;

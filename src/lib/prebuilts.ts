@@ -19,14 +19,16 @@ export type Prebuilt = {
   city: string;
 };
 
-const RECIPES: Array<{
+export type PrebuiltRecipe = {
   id: string;
   title: string;
   parts: string[];
   condition: "new" | "used";
   store: string;
   city: string;
-}> = [
+};
+
+export const RECIPES: PrebuiltRecipe[] = [
   {
     id: "pb-esports",
     title: "Starter eSports",
@@ -140,8 +142,18 @@ export const BUDGET_BRACKETS = [
   { id: "10plus", label: "10,000 DH+", min: 10000, max: 999999 },
 ];
 
+let liveRecipesFn: (() => PrebuiltRecipe[] | undefined) | undefined;
+export function bindLiveRecipes(fn: () => PrebuiltRecipe[] | undefined) {
+  liveRecipesFn = fn;
+}
+
+export function recipes(): PrebuiltRecipe[] {
+  const live = liveRecipesFn?.();
+  return live && live.length ? live : RECIPES;
+}
+
 export function prebuilts(): Prebuilt[] {
-  return RECIPES.map((r) => {
+  return recipes().map((r) => {
     const parts = r.parts.map((id) => productById(id)).filter((p): p is Product => Boolean(p));
     const used = r.condition === "used";
     const price = parts.reduce((a, p) => a + (used ? p.used_price : p.best_price), 0);
@@ -156,7 +168,7 @@ export function prebuilts(): Prebuilt[] {
       condition: r.condition,
       store: r.store,
       city: r.city,
-      gpu: gpu ? (gpu.specs.Chipset || gpu.name) : "Integrated",
+      gpu: gpu ? gpu.specs.Chipset || gpu.name : "Integrated",
       cpu: cpu?.name ?? "—",
       ram: pick(parts, "ram")?.name ?? "—",
       storage: pick(parts, "storage")?.name ?? "—",

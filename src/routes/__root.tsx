@@ -1,4 +1,4 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 import { AuthProvider } from "@/lib/auth/provider";
@@ -8,6 +8,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { I18nProvider } from "@/lib/i18n";
 import { useBuild } from "@/lib/store";
+import { useOps } from "@/lib/ops";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "CHECKMYPC";
@@ -21,6 +22,27 @@ function HydrateBuild() {
     return () => window.removeEventListener("cmp:build", on);
   }, [hydrate]);
   return null;
+}
+
+function HydrateOps() {
+  const hydrate = useOps((s) => s.hydrate);
+  useEffect(() => {
+    hydrate();
+  }, [hydrate]);
+  return null;
+}
+
+function AppChrome() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
+  return (
+    <>
+      {!isAdmin && <DataBanner />}
+      {!isAdmin && <SiteHeader />}
+      <Outlet />
+      {!isAdmin && <SiteFooter />}
+    </>
+  );
 }
 
 export const Route = createRootRoute({
@@ -68,10 +90,8 @@ function RootLayout() {
         <AuthProvider>
           <I18nProvider>
             <HydrateBuild />
-            <DataBanner />
-            <SiteHeader />
-            <Outlet />
-            <SiteFooter />
+            <HydrateOps />
+            <AppChrome />
             <Toaster theme="system" position="bottom-center" />
           </I18nProvider>
         </AuthProvider>

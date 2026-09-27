@@ -19,6 +19,25 @@ export type UsedListing = {
   ssdHealth?: number;
 };
 
+export type InspectionReport = {
+  id: string;
+  listingId?: string;
+  bookingId?: string;
+  title: string;
+  date: string;
+  city: string;
+  technician: string;
+  verdict: Verdict;
+  risk: "low" | "medium" | "high";
+  asking: number;
+  fairValue: number;
+  suggestOffer: number;
+  hardware: [string, string, string][];
+  temps: { cpuIdle: number; cpuLoad: number; gpuIdle: number; gpuLoad: number };
+  issues: string[];
+  published: boolean;
+};
+
 export const USED_LISTINGS: UsedListing[] = [
   {
     id: "used-casa-4060",
@@ -91,14 +110,15 @@ export const USED_LISTINGS: UsedListing[] = [
   },
 ];
 
-export const SAMPLE_REPORT = {
+export const SAMPLE_REPORT: InspectionReport = {
   id: "rep-4060",
   listingId: "used-casa-4060",
+  title: "Sample report · RTX 4060 tower",
   date: "2026-09-18",
   city: "Casablanca",
   technician: "Youssef B.",
-  verdict: "NEGOTIATE" as Verdict,
-  risk: "medium" as const,
+  verdict: "NEGOTIATE",
+  risk: "medium",
   asking: 6200,
   fairValue: 5800,
   suggestOffer: 5400,
@@ -109,11 +129,37 @@ export const SAMPLE_REPORT = {
     ["Storage", "Kingston NV2 1 TB", "SMART 94%"],
     ["Motherboard", "MSI B550M Pro-VDH", "No VRM burn"],
     ["PSU", "Unbranded 500W", "Underspec — replace"],
-  ] as [string, string, string][],
+  ],
   temps: { cpuIdle: 38, cpuLoad: 78, gpuIdle: 41, gpuLoad: 72 },
   issues: [
     "Non-certified PSU — primary risk",
     "Front USB-A port intermittent",
     "Dust on GPU fins (not packed)",
   ],
+  published: true,
 };
+
+let liveListingsFn: (() => UsedListing[] | undefined) | undefined;
+let liveReportsFn: (() => InspectionReport[] | undefined) | undefined;
+
+export function bindLiveUsed(
+  listings: () => UsedListing[] | undefined,
+  reports: () => InspectionReport[] | undefined,
+) {
+  liveListingsFn = listings;
+  liveReportsFn = reports;
+}
+
+export function usedListings(): UsedListing[] {
+  const live = liveListingsFn?.();
+  return live && live.length ? live : USED_LISTINGS;
+}
+
+export function inspectionReports(): InspectionReport[] {
+  const live = liveReportsFn?.();
+  return live && live.length ? live : [SAMPLE_REPORT];
+}
+
+export function reportById(id: string) {
+  return inspectionReports().find((r) => r.id === id);
+}

@@ -5,13 +5,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useI18n } from "@/lib/i18n";
-import { INSPECTION } from "@/lib/services";
+import { INSPECTION, livePackages } from "@/lib/services";
+import { useOps } from "@/lib/ops";
 import { dh } from "@/lib/utils";
 
 export const Route = createFileRoute("/inspection")({ component: InspectionPage });
 
 function InspectionPage() {
   const { t } = useI18n();
+  useOps((s) => s.packagePrices);
+  const packages = livePackages(INSPECTION.packages);
   return (
     <main>
       <PageHero
@@ -50,7 +53,7 @@ function InspectionPage() {
             </Button>
           </Card>
           <div className="grid gap-3 sm:grid-cols-2">
-            {INSPECTION.packages.map((p) => (
+            {packages.map((p) => (
               <Card key={p.id} className="rounded-xl p-4">
                 <h3 className="font-medium">{p.name}</h3>
                 <p className="font-display text-xl font-semibold tabular-nums">{dh(p.price)}</p>
@@ -66,7 +69,7 @@ function InspectionPage() {
         </div>
         <div>
           <h2 className="mb-3 font-display text-lg font-semibold">{t("nav.book")}</h2>
-          <BookingForm kind="inspection" packages={INSPECTION.packages} extra="listing" />
+          <BookingForm kind="inspection" packages={packages} extra="listing" />
         </div>
       </div>
     </main>

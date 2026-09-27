@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ProductRow } from "@/components/product-card";
 import { searchProducts } from "@/lib/catalog";
 import { useI18n } from "@/lib/i18n";
+import { useOps } from "@/lib/ops";
 
 export const Route = createFileRoute("/search")({
   validateSearch: (s: Record<string, unknown>): { q?: string } =>
@@ -16,7 +17,8 @@ function SearchPage() {
   const { t } = useI18n();
   const { q: initial = "" } = Route.useSearch();
   const [q, setQ] = useState(initial);
-  const rows = useMemo(() => searchProducts(q), [q]);
+  const products = useOps((s) => s.products);
+  const rows = useMemo(() => searchProducts(q), [q, products]);
 
   return (
     <main>

@@ -172,6 +172,12 @@ export const CONTACT = {
   facebook: "https://facebook.com/checkmypc.ma",
 };
 
+export const ALL_PACKAGES: Package[] = [
+  ...INSPECTION.packages,
+  ...ASSEMBLY.packages,
+  ...CLEANING.packages,
+];
+
 export const STEPS = [
   { id: "check", label: "CHECK", hint: "Specs vs listing" },
   { id: "compare", label: "COMPARE", hint: "Lowest listed DH" },
@@ -180,3 +186,25 @@ export const STEPS = [
   { id: "inspect", label: "INSPECT", hint: "Used, verified" },
   { id: "buy", label: "BUY", hint: "Decide with a report" },
 ];
+
+let livePricesFn: (() => Record<string, number> | undefined) | undefined;
+export function bindLivePrices(fn: () => Record<string, number> | undefined) {
+  livePricesFn = fn;
+}
+
+export function packageById(id?: string) {
+  if (!id) return undefined;
+  return ALL_PACKAGES.find((p) => p.id === id);
+}
+
+export function livePackages(list: Package[]): Package[] {
+  const prices = livePricesFn?.() ?? {};
+  return list.map((p) => ({ ...p, price: prices[p.id] ?? p.price }));
+}
+
+export function livePackagePrice(id?: string, fallback = 0) {
+  if (!id) return fallback;
+  const prices = livePricesFn?.() ?? {};
+  if (prices[id] != null) return prices[id];
+  return packageById(id)?.price ?? fallback;
+}

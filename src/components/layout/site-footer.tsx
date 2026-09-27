@@ -54,6 +54,9 @@ export function SiteFooter() {
             <Link to="/contact" className="hover:text-primary">
               {t("nav.contact")}
             </Link>
+            <Link to="/admin" className="hover:text-primary">
+              Ops console
+            </Link>
           </div>
         </div>
         <div>
