@@ -1,0 +1,1546 @@
+MASTER BUSINESS PLAN PROMPT — CHECKMYPC.MA
+
+Act as a senior business strategist, startup consultant, product manager, Moroccan market researcher, digital marketing strategist, social media growth specialist, operations manager, and financial planning expert.
+
+I am building a Moroccan technology business called:
+
+CHECKMYPC.MA
+
+The goal is to create a trusted Moroccan PC buying, building, maintenance, inspection, and price-comparison platform.
+
+Do NOT give me generic startup advice.
+
+I want a realistic, detailed, step-by-step business plan designed specifically for Morocco, with practical actions, examples, priorities, estimated costs, risks, KPIs, and execution steps.
+
+The final objective is to turn CHECKMYPC into a recognizable Moroccan PC technology brand and a profitable business.
+
+==================================================
+1. BUSINESS CONCEPT
+==================================================
+
+Brand:
+
+CHECKMYPC.MA
+
+Main slogan:
+
+CHECK BEFORE YOU BUY.
+
+Darija:
+
+شيّك قبل ما تشري.
+
+Core philosophy:
+
+CHECK → COMPARE → BUILD → CLEAN → INSPECT → BUY
+
+CHECKMYPC should combine:
+
+1. PC hardware price comparison
+2. PC component catalogue
+3. Ready-made PC builds
+4. Custom PC assembly service
+5. Used PC inspection service
+6. PC cleaning / maintenance service
+7. PC buying advice
+8. Educational content
+9. Deals and offers
+10. Eventually, a Moroccan PC marketplace
+
+The platform should not feel like a normal PC shop.
+
+Its main value is helping people make better PC buying and ownership decisions.
+
+==================================================
+2. SERVICES
+==================================================
+
+Analyze and develop these services individually.
+
+----------------------------------
+SERVICE A — USED PC INSPECTION
+----------------------------------
+
+CHECKMYPC technicians inspect a PC before the customer buys it.
+
+The inspection should include:
+
+CPU
+GPU
+RAM
+SSD/HDD
+Motherboard
+PSU
+Cooling
+Temperatures
+Stress tests
+Gaming performance
+Storage health
+RAM stability
+CPU stability
+GPU stability
+Fans
+Noise
+USB ports
+Display outputs
+Network
+Wi-Fi
+Bluetooth
+BIOS
+Physical condition
+
+The customer receives:
+
+- Inspection report
+- Photos
+- Videos
+- Test results
+- Temperature results
+- Hardware verification
+- Problems detected
+- Estimated fair value
+- Risk level
+- Final inspection result
+
+Possible result:
+
+BUY
+NEGOTIATE / CHECK FURTHER
+DON'T BUY
+
+Create the complete customer journey:
+
+Customer discovers service
+→ contacts CHECKMYPC
+→ provides listing/details
+→ technician schedules inspection
+→ technician visits seller
+→ performs tests
+→ documents results
+→ generates report
+→ sends report to customer
+→ customer decides whether to buy
+
+Explain:
+
+- Pricing model
+- Inspection fee
+- Travel fee
+- Service radius
+- Cities to launch in
+- Technician requirements
+- Tools required
+- Inspection checklist
+- Report format
+- Customer communication
+- Cancellation policy
+- Refund policy
+- Liability limitations
+- Quality control
+- How to prevent fraud
+- How to build trust
+
+Initially analyze:
+
+Casablanca
+Rabat
+Agadir
+
+Then propose expansion criteria for other Moroccan cities.
+
+----------------------------------
+SERVICE B — CUSTOM PC ASSEMBLY
+----------------------------------
+
+Customer buys or provides PC components.
+
+CHECKMYPC assembles the PC professionally.
+
+Service should include:
+
+Component verification
+Compatibility check
+Assembly
+Cable management
+BIOS configuration
+RAM configuration
+Storage installation
+Windows installation where legally appropriate
+Drivers
+Stress testing
+Temperature testing
+Basic performance testing
+Final quality check
+
+Customer receives:
+
+- Finished PC
+- Test results
+- Photos
+- Basic report
+- Component list
+- Warranty/service terms where applicable
+
+Develop:
+
+Pricing model
+
+Example pricing structures to evaluate:
+
+Fixed assembly fee
+OR
+Percentage of component value
+OR
+Different packages
+
+Example packages:
+
+BASIC
+STANDARD
+PREMIUM
+
+Analyze which structure is easier to sell and operate.
+
+Also define:
+
+Turnaround time
+Pickup/delivery
+Customer-supplied parts
+Parts bought through CHECKMYPC
+Warranty handling
+Damage responsibility
+Testing procedure
+
+----------------------------------
+SERVICE C — PC CLEANING
+----------------------------------
+
+Create a professional PC cleaning service.
+
+Services may include:
+
+External cleaning
+Internal dust removal
+Fans
+GPU
+CPU cooler
+Radiators
+Filters
+Case cleaning
+Cable organization
+Thermal paste replacement
+Thermal pad replacement when appropriate
+Temperature testing
+
+Create packages such as:
+
+Basic Cleaning
+Deep Cleaning
+Thermal Service
+Full Maintenance
+
+Explain:
+
+What is included
+What is not included
+Pricing logic
+Required tools
+Time required
+Customer expectations
+Before/after documentation
+Upselling opportunities
+
+Do not recommend unsafe cleaning methods.
+
+==================================================
+3. WEBSITE
+==================================================
+
+The website is:
+
+CHECKMYPC.MA
+
+The website should become the central platform connecting:
+
+Services
+Products
+Prices
+PC builds
+Prebuilt PCs
+Used PCs
+Inspection
+Content
+Contact
+Bookings
+
+Main sections:
+
+HOME
+COMPONENTS
+PRICE COMPARISON
+PC BUILDER
+PREBUILT PCs
+USED PCs
+INSPECTION
+PC ASSEMBLY
+PC CLEANING
+GUIDES
+DEALS
+CONTACT
+
+==================================================
+4. PRICE COMPARISON
+==================================================
+
+One of the main features should be:
+
+“Find the best available price.”
+
+Users can browse:
+
+CPU
+GPU
+RAM
+Motherboards
+SSD
+HDD
+PSU
+Cases
+Cooling
+Monitors
+Peripherals
+
+For every product show:
+
+Product name
+Image
+Specifications
+Store
+Price
+Availability
+Last checked
+Offer URL
+
+Example:
+
+RTX 4060
+
+Store A — 3,099 DH
+Store B — 3,249 DH
+Store C — 3,399 DH
+Store D — 2,999 DH
+
+Highlight:
+
+LOWEST PRICE
+
+Add:
+
+VIEW OFFER
+
+The user should be able to select:
+
+“Show lowest price”
+
+The system should identify the lowest available listed offer.
+
+IMPORTANT:
+
+Never invent prices.
+
+Never invent store URLs.
+
+Clearly distinguish:
+
+Live/current data
+Recently checked data
+Estimated prices
+Demo data
+
+Explain how CHECKMYPC can technically collect prices:
+
+Manual admin entry
+Store feeds
+APIs
+Affiliate feeds
+Approved integrations
+Future automated price monitoring
+
+Explain which approach is realistic at launch.
+
+==================================================
+5. PREBUILT PC SECTION
+==================================================
+
+Create a section for ready-made PCs.
+
+Each build should show:
+
+Name
+Price
+CPU
+GPU
+RAM
+Storage
+Motherboard
+PSU
+Case
+Condition
+Store
+Offer URL
+
+Users should be able to compare multiple prebuilt PCs.
+
+Example:
+
+Gaming PC — 5,000 DH
+
+Gaming PC — 7,000 DH
+
+Gaming PC — 10,000 DH
+
+Allow filters by:
+
+Budget
+GPU
+CPU
+RAM
+Storage
+Condition
+Store
+
+==================================================
+6. CUSTOM BUILD SYSTEM
+==================================================
+
+Create a PC Builder.
+
+User chooses:
+
+CPU
+GPU
+Motherboard
+RAM
+Storage
+PSU
+Case
+Cooler
+
+System checks:
+
+Socket compatibility
+RAM compatibility
+Power consumption
+Case compatibility
+Cooler compatibility
+Motherboard compatibility
+
+Show:
+
+TOTAL PRICE
+COMPATIBILITY
+ESTIMATED POWER
+AVAILABLE OFFERS
+
+Allow:
+
+Save Build
+Share Build
+Request Assembly
+
+Important:
+
+The builder should eventually become a lead-generation tool for the assembly service.
+
+Example:
+
+User finishes a 7,500 DH build.
+
+Show:
+
+“Want us to assemble it for you?”
+
+BUTTON:
+
+REQUEST ASSEMBLY
+
+==================================================
+7. BUSINESS MODEL
+==================================================
+
+Analyze all possible revenue streams.
+
+A. Inspection fees
+
+B. PC assembly fees
+
+C. Cleaning / maintenance fees
+
+D. Affiliate commissions
+
+E. Store partnerships
+
+F. Featured product listings
+
+G. Sponsored placements
+
+H. Prebuilt PC commissions
+
+I. Used PC inspection marketplace fees
+
+J. Future marketplace transaction fees
+
+K. Advertising
+
+For each revenue stream explain:
+
+How it works
+Who pays
+Expected margin
+Difficulty
+Required infrastructure
+Trust risks
+Scalability
+When to launch it
+
+Do not assume unrealistic revenue.
+
+Separate:
+
+EARLY REVENUE
+MEDIUM-TERM REVENUE
+LONG-TERM REVENUE
+
+==================================================
+8. LAUNCH STRATEGY
+==================================================
+
+Design the launch in phases.
+
+PHASE 0 — VALIDATION
+
+Before investing heavily:
+
+Validate demand.
+
+Create:
+
+Instagram
+Facebook
+TikTok
+Landing page
+WhatsApp Business
+
+Publish educational content.
+
+Offer inspection manually.
+
+Offer cleaning manually.
+
+Offer assembly manually.
+
+Measure:
+
+Messages
+Requests
+Bookings
+Conversion
+Customer questions
+Most requested services
+
+Explain exactly what should be tested.
+
+----------------------------------
+PHASE 1 — MVP
+----------------------------------
+
+Launch:
+
+Website
+Price catalogue
+Prebuilt catalogue
+PC Builder
+Inspection service
+Assembly service
+Cleaning service
+
+Keep operations simple.
+
+Use manual data management where necessary.
+
+----------------------------------
+PHASE 2 — GROWTH
+----------------------------------
+
+Add:
+
+More stores
+More products
+More cities
+More technicians
+Price alerts
+User accounts
+Saved builds
+Reviews
+Affiliate partnerships
+
+----------------------------------
+PHASE 3 — PLATFORM
+----------------------------------
+
+Eventually create:
+
+Used PC marketplace
+Seller accounts
+Technician network
+Automated price monitoring
+Advanced PC recommendations
+Mobile application
+Inspection booking system
+Customer dashboard
+
+==================================================
+9. MARKETING STRATEGY
+==================================================
+
+Create a detailed marketing strategy specifically for:
+
+Instagram
+Facebook
+TikTok
+
+Do not treat all platforms identically.
+
+Explain the role of each platform.
+
+Build a funnel:
+
+CONTENT
+↓
+PROFILE
+↓
+WEBSITE
+↓
+WHATSAPP / SERVICE
+↓
+BOOKING
+↓
+CUSTOMER
+↓
+REVIEW
+↓
+REFERRAL
+
+==================================================
+10. CONTENT PILLARS
+==================================================
+
+Create content pillars.
+
+Examples:
+
+1. USED PC INSPECTION
+2. PC BUYING TIPS
+3. PRICE COMPARISON
+4. PC BUILDS
+5. PC CLEANING
+6. PC ASSEMBLY
+7. HARDWARE EDUCATION
+8. DEALS
+9. PC FAILURES
+10. BEFORE / AFTER
+11. CUSTOMER CASES
+12. MYTHS
+13. COMPONENT COMPARISONS
+14. MOROCCAN MARKET CONTENT
+
+Explain the percentage of content that should be dedicated to each pillar during the first 90 days.
+
+==================================================
+11. BEGINNER CONTENT STRATEGY
+==================================================
+
+Tell me exactly what content to focus on during the first:
+
+7 days
+30 days
+60 days
+90 days
+
+Do not start with excessive promotional posts.
+
+Explain:
+
+What to publish
+Why
+Format
+Hook
+CTA
+Visual concept
+Caption
+Keywords
+Hashtags
+
+==================================================
+12. HOOK GENERATOR
+==================================================
+
+Create at least 100 hooks specifically for CHECKMYPC.
+
+Examples:
+
+“PC بـ4,000 DH… واش فعلاً صفقة؟”
+
+“قبل ما تشري PC مستعمل، دير هاد 5 الحوايج.”
+
+“هاد GPU باين رخيص… ولكن علاش؟”
+
+“لقيتي PC بـ3,500 DH؟ متشريهش قبل ما تشوف هادشي.”
+
+“نفس RTX 4060 ولكن فرق كبير فالثمن.”
+
+“شنو أول حاجة خاصك تشيك فـPC مستعمل؟”
+
+“PC ديالك ولا كيسخن؟ شوف هادشي.”
+
+“ماشي أي PC Gaming بـ5,000 DH راه صفقة.”
+
+Generate hooks in:
+
+Moroccan Darija
+Arabic
+English keywords where useful
+
+Make them short and natural.
+
+==================================================
+13. KEYWORDS
+==================================================
+
+Create a keyword strategy.
+
+Include:
+
+Moroccan Arabic
+Darija
+Arabic
+French
+English
+
+Categories:
+
+PC buying
+PC gaming
+Used PC
+PC cleaning
+PC assembly
+GPU
+CPU
+RAM
+SSD
+PC prices
+Gaming PC Morocco
+PC Maroc
+PC Gaming Maroc
+PC occasion Maroc
+PC gamer occasion
+RTX Maroc
+GPU Maroc
+PC build Maroc
+PC pas cher Maroc
+
+Separate:
+
+Search keywords
+Social keywords
+Hashtags
+Long-tail keywords
+Local keywords
+
+==================================================
+14. INSTAGRAM STRATEGY
+==================================================
+
+Create a complete Instagram strategy.
+
+Content formats:
+
+Reels
+Carousel
+Stories
+Highlights
+Before/after
+Customer results
+Price comparison
+PC builds
+Inspection reports
+
+Define:
+
+Posting frequency
+Best content formats to test
+Profile structure
+Bio
+Highlights
+CTA
+Link strategy
+Story strategy
+DM strategy
+
+Create a 30-day Instagram calendar.
+
+==================================================
+15. FACEBOOK STRATEGY
+==================================================
+
+Use Facebook differently from Instagram.
+
+Focus on:
+
+PC groups
+Moroccan gaming communities
+Local communities
+Marketplace-related conversations
+Educational posts
+Longer explanations
+Customer cases
+Service offers
+
+Explain how to participate in groups without becoming spam.
+
+Create:
+
+30 Facebook post ideas.
+
+==================================================
+16. TIKTOK STRATEGY
+==================================================
+
+TikTok should focus on:
+
+Fast education
+Problems
+Surprising findings
+Used PC inspections
+PC cleaning transformations
+Price comparisons
+Builds
+Hardware tests
+
+Create:
+
+30 TikTok video ideas.
+
+For every video provide:
+
+Hook
+Scene
+Voiceover
+On-screen text
+CTA
+Approximate duration
+
+Focus heavily on:
+
+10–30 second videos.
+
+==================================================
+17. CONTENT EXAMPLES
+==================================================
+
+Create complete examples.
+
+Example 1:
+
+Used PC inspection.
+
+Hook:
+“PC بـ4,000 DH… واش صفقة ولا مصيبة؟”
+
+Script:
+Show listing
+Show inspection
+Show GPU
+Show CPU
+Show temperatures
+Show SSD health
+Show PSU
+Show final report
+
+CTA:
+
+“قبل ما تشري PC مستعمل، شيّك عليه.”
+
+==================================================
+
+Example 2:
+
+PC Cleaning.
+
+Before:
+Dusty PC
+
+After:
+Clean PC
+
+Show:
+
+Fans
+GPU
+CPU cooler
+Cable management
+Temperature result
+
+CTA:
+
+“PC ديالك محتاج تنظيف؟”
+
+==================================================
+
+Example 3:
+
+PC Assembly.
+
+Show:
+
+Components
+Compatibility
+Assembly
+Cable management
+Testing
+Final PC
+
+CTA:
+
+“عندك القطع؟ خلي علينا التجميع.”
+
+==================================================
+
+Example 4:
+
+Price comparison.
+
+Show:
+
+RTX 4060
+
+Store A
+Store B
+Store C
+Lowest price
+
+CTA:
+
+“قارن قبل ما تشري.”
+
+==================================================
+18. PAID ADVERTISING
+==================================================
+
+Create a paid advertising strategy for:
+
+Meta Ads
+Instagram Ads
+Facebook Ads
+TikTok Ads
+
+Separate campaigns for:
+
+Brand awareness
+Inspection service
+Assembly service
+Cleaning service
+Price comparison
+PC Builder
+
+Explain:
+
+Target audience
+Location
+Age ranges
+Creative
+Hook
+CTA
+Landing page
+Retargeting
+Budget testing
+
+Do not assume exact advertising costs.
+
+Instead provide:
+
+Low budget
+Medium budget
+Growth budget
+
+and explain what should be tested.
+
+==================================================
+19. LOCAL MARKETING
+==================================================
+
+Create a Morocco-specific offline strategy.
+
+Ideas:
+
+Gaming cafés
+PC shops
+Universities
+Student communities
+Gaming events
+Esports communities
+Computer repair shops
+Local technicians
+
+Create partnership ideas.
+
+For example:
+
+PC shop partnership
+→ CHECKMYPC handles inspection
+→ shop gets trusted referral
+→ customer gets service
+
+Analyze conflicts of interest carefully.
+
+==================================================
+20. CUSTOMER ACQUISITION
+==================================================
+
+Design the complete acquisition system.
+
+Potential customer:
+
+Sees TikTok
+→ follows Instagram
+→ visits website
+→ checks price
+→ builds PC
+→ requests assembly
+
+OR:
+
+Sees used PC listing
+→ contacts CHECKMYPC
+→ requests inspection
+→ pays inspection fee
+→ receives report
+→ buys PC
+
+Create exact funnels for:
+
+Inspection
+Assembly
+Cleaning
+Price comparison
+PC Builder
+
+==================================================
+21. TRUST SYSTEM
+==================================================
+
+Trust is critical.
+
+Design:
+
+Verified Inspection
+Checked Price
+Last Checked
+Compatible
+Best Available Price
+Inspection Report
+Customer Review
+
+Create policies for:
+
+Pricing transparency
+Affiliate disclosure
+Sponsored products
+Inspection limitations
+Store relationships
+Customer data
+Refunds
+Service quality
+
+==================================================
+22. OPERATIONS
+==================================================
+
+Create the operational system.
+
+For each service explain:
+
+Customer intake
+Scheduling
+Payment
+Execution
+Quality control
+Documentation
+Delivery
+Follow-up
+Review request
+
+Create SOPs:
+
+Inspection SOP
+Cleaning SOP
+Assembly SOP
+Customer support SOP
+Content publishing SOP
+Price update SOP
+
+==================================================
+23. TOOLS AND EQUIPMENT
+==================================================
+
+Create a realistic equipment list for starting the services.
+
+Inspection tools:
+
+USB tools
+Temperature monitoring
+SSD health tools
+RAM testing
+GPU testing
+CPU testing
+Power testing
+Cable tools
+
+Cleaning tools:
+
+Compressed air
+ESD-safe equipment
+Brushes
+Cleaning materials
+Thermal paste
+Screwdrivers
+Anti-static protection
+
+Assembly tools:
+
+Screwdriver set
+Anti-static equipment
+Cable management
+Thermal paste
+USB installer
+Testing tools
+
+For each item provide:
+
+Purpose
+Priority
+Estimated cost range in Morocco
+Essential / Optional
+
+Do not invent exact current prices; mark estimates clearly.
+
+==================================================
+24. TEAM
+==================================================
+
+Design a realistic starting team.
+
+Founder
+Technician
+Content creator
+Marketing
+Customer support
+
+Explain which roles can initially be combined.
+
+Create hiring criteria.
+
+==================================================
+25. FINANCIAL PLAN
+==================================================
+
+Create a realistic financial model.
+
+Include:
+
+Startup costs
+Monthly fixed costs
+Variable costs
+Service costs
+Marketing budget
+Equipment
+Transport
+Website
+Hosting
+Tools
+Branding
+Packaging
+
+Create scenarios:
+
+Low budget
+Medium budget
+Growth
+
+Calculate:
+
+Break-even point
+
+based on:
+
+Inspection services
+Assembly services
+Cleaning services
+Affiliate income
+
+Do not fabricate certainty.
+
+Clearly mark assumptions.
+
+==================================================
+26. PRICING STRATEGY
+==================================================
+
+Develop pricing for:
+
+Inspection
+Assembly
+Cleaning
+Thermal paste replacement
+Deep cleaning
+Delivery
+Travel
+
+Create:
+
+Basic
+Standard
+Premium
+
+packages where appropriate.
+
+Explain the psychology behind pricing without misleading customers.
+
+==================================================
+27. COMPETITION
+==================================================
+
+Research the Moroccan market.
+
+Identify:
+
+PC retailers
+PC builders
+Repair shops
+Used PC sellers
+Hardware comparison websites
+Facebook groups
+Instagram pages
+TikTok creators
+Local technicians
+
+Do not simply list competitors.
+
+Analyze:
+
+Their offer
+Pricing where publicly available
+Strengths
+Weaknesses
+Customer experience
+Social media strategy
+Positioning
+What CHECKMYPC can differentiate on
+
+Clearly separate verified facts from your analysis.
+
+==================================================
+28. DIFFERENTIATION
+==================================================
+
+Develop a clear reason for customers to choose CHECKMYPC.
+
+Potential positioning:
+
+“Not just selling PCs.
+Helping you make the right PC decision.”
+
+Build a strong value proposition around:
+
+Transparency
+Price comparison
+Compatibility
+Inspection
+Technical expertise
+Moroccan market
+Education
+
+Give me several positioning options and explain the trade-offs between them without declaring an absolute winner.
+
+==================================================
+29. 90-DAY EXECUTION PLAN
+==================================================
+
+Create a day-by-day / week-by-week plan.
+
+Week 1
+Brand setup
+Profiles
+Website
+WhatsApp Business
+Service definitions
+
+Week 2
+Content production
+Inspection checklist
+Cleaning SOP
+Assembly SOP
+
+Week 3
+Soft launch
+
+Week 4
+First customers
+Reviews
+Case studies
+
+Month 2
+Increase content
+Partnerships
+Price comparison
+Website improvements
+
+Month 3
+Paid advertising
+More cities
+More services
+Affiliate partnerships
+
+For every week provide:
+
+Tasks
+Priority
+Owner
+Expected result
+KPI
+
+==================================================
+30. KPI DASHBOARD
+==================================================
+
+Define measurable KPIs.
+
+Social:
+
+Followers
+Reach
+Views
+Watch time
+Shares
+Saves
+Comments
+DMs
+Profile visits
+
+Website:
+
+Visitors
+Product searches
+Builds created
+Offer clicks
+Inspection requests
+Assembly requests
+Cleaning requests
+
+Business:
+
+Leads
+Bookings
+Customers
+Revenue
+Average order value
+Conversion rate
+Repeat customers
+Referral rate
+Customer acquisition cost
+Gross margin
+
+Explain which KPIs matter most during each phase.
+
+==================================================
+31. FAILURE RISKS
+==================================================
+
+Identify at least 30 ways CHECKMYPC could fail.
+
+Examples:
+
+Trying to do everything at once
+Poor service quality
+Fake/old prices
+Low trust
+No customer reviews
+Weak content
+Overbuilding the website
+No backend
+Too many cities too early
+Underpricing services
+Bad technicians
+Slow response
+Poor inspection reports
+No follow-up
+Overdependence on one platform
+Legal issues
+Data accuracy problems
+Store conflicts
+Customer disputes
+
+For each:
+
+Risk
+Probability
+Impact
+Prevention
+Contingency
+
+==================================================
+32. BRAND CONTENT SYSTEM
+==================================================
+
+Create a recognizable CHECKMYPC content identity.
+
+Every post should visually use:
+
+CHECKMYPC
+Blue
+Dark navy
+White
+Checkmark
+Technical graphics
+Price badges
+Compatibility badges
+
+Brand message:
+
+CHECK BEFORE YOU BUY.
+
+Recurring series:
+
+“CHECK OF THE DAY”
+“PRICE CHECK”
+“USED PC CHECK”
+“BUILD OF THE WEEK”
+“DON'T BUY BEFORE CHECKING”
+“PC CLEANING”
+“BUILD WITH US”
+“IS IT WORTH IT?”
+
+==================================================
+33. FINAL BUSINESS ROADMAP
+==================================================
+
+At the end create a complete roadmap:
+
+0–30 DAYS
+30–90 DAYS
+3–6 MONTHS
+6–12 MONTHS
+1–2 YEARS
+
+Explain:
+
+Product
+Services
+Marketing
+Team
+Technology
+Revenue
+Cities
+Partnerships
+Operations
+
+==================================================
+34. FINAL OUTPUT FORMAT
+==================================================
+
+Your final response must be extremely structured.
+
+Start with:
+
+EXECUTIVE SUMMARY
+
+Then:
+
+1. Business Model
+2. Target Customers
+3. Services
+4. Website
+5. Price Comparison
+6. PC Builder
+7. Used PC Inspection
+8. PC Assembly
+9. PC Cleaning
+10. Revenue Model
+11. Pricing
+12. Marketing
+13. Instagram
+14. Facebook
+15. TikTok
+16. Content Strategy
+17. Hooks
+18. Keywords
+19. 30-Day Content Calendar
+20. Paid Ads
+21. Local Partnerships
+22. Operations
+23. Equipment
+24. Team
+25. Financial Model
+26. Competition
+27. Differentiation
+28. Risks
+29. KPIs
+30. 90-Day Plan
+31. 1-Year Roadmap
+32. Exact First Steps
+
+Use tables whenever useful.
+
+Give concrete examples.
+
+Give realistic assumptions.
+
+Distinguish facts from estimates.
+
+When current Moroccan market information is required, research current sources first and cite them.
+
+Do not invent current prices, competitors, statistics, APIs, partnerships, or market data.
+
+If information is uncertain, explicitly label it as an assumption or something that needs validation.
+
+Most importantly:
+
+Do not give me a generic “start a business” plan.
+
+Build the strategy specifically around CHECKMYPC.MA, the Moroccan PC market, these three services:
+
+1. PC Inspection
+2. PC Assembly
+3. PC Cleaning
+
+and the digital platform:
+
+PRICE COMPARISON
++
+PC BUILDER
++
+PREBUILT PCs
++
+USED PCs
++
+STORE OFFERS
+
+The final objective is to build a sustainable business that starts small, validates demand, generates revenue early, builds trust through real customers and documented results, and gradually evolves into a major Moroccan PC buying and services platform.
+
+CORE BRAND:
+
+CHECKMYPC.MA
+
+CHECK → COMPARE → BUILD → CLEAN → INSPECT → BUY
+
+CHECK BEFORE YOU BUY.

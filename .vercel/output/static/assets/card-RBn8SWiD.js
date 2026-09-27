@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./utils-CZ9doBud.js";var n=t();function r({className:t,...r}){return(0,n.jsx)(`div`,{className:e(`rounded-xl bg-surface p-4 shadow-[var(--shadow-border)] transition-[box-shadow] duration-150`,t),...r})}export{r as t};

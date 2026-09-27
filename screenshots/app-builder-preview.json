@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CHECKMYPC",
+      "hasCanvas": false,
+      "bodyTextLen": 2486,
+      "bodyTextHash": "4cf9d022a7b24a34e453c5aadcf159a95a46f07ecdc300682d39521f575b71f5",
+      "bodyTextPrefix": "Demo data · Sample store prices for demonstration — not a live f",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CHECKMYPC",
+      "hasCanvas": false,
+      "bodyTextLen": 2366,
+      "bodyTextHash": "3b1a3b2072fd282b86af05e6db65c1f2606b2da26422d6d3db5b2b062204db8d",
+      "bodyTextPrefix": "Demo data · Sample store prices for demonstration — not a live f",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
